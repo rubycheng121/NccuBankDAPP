@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>nccubank web3.js</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<div class="Header">
+<h4>NCCU Bank</h4>
+
+<h5 id="contractAddress">合約位址: </h5>
+<input id="deployedContractAddress" type="text" placeholder="請輸入既有合約位址" />
+<button id="loadDeployedContractButton">載入既有合約位址</button>
+<button type="button" class="btn btn-default" id="deployNewContractButton">部署新合約</button>
+
+
+
+<h3>帳戶登入</h3>
+<select id="whoami"></select>
+<button type="button" class="btn btn-default" id="whoamiButton">登入</button>
+
+<h3 id="accountStatus">帳戶狀態</h3>
+<h5 id="ethBalance">以太帳戶餘額 (wei): </h5>
+<h5 id="bankBalance">NCCU COIN餘額 (wei): </h5>
+
+</div>  
+
+
+<hr>
+
+<div class="parent">
+	<div class="left">
+<h3>買NCCU COIN</h3>
+<input id="deposit" type="number" placeholder="請輸入存款額度 (ether)">
+<button type="button" class="btn btn-default" id="depositButton">執行</button>
+
+<h3>賣NCCU COIN</h3>
+<input id="withdraw" type="number" placeholder="請輸入提款額度 (ether)">
+<button type="button" class="btn btn-default" id="withdrawButton">執行</button>
+
+<h3>轉帳(NCCU COIN)</h3>
+<input id="transferTo" type="text" placeholder="請輸入轉帳對象">
+<input id="transferEtherValue" type="number" placeholder="請輸入轉帳額度 (ether)">
+<button type="button" class="btn btn-default" id="transferButton">執行</button>
+
+
+
+
+
+<h4 id="datah4">定存</h4>
+
+
+<input id="amount" type="text" placeholder="金額(使用NCCU_COIN wei)"/>
+<input id="installment" type="text" placeholder="期數"/>
+<button type="button" class="btn btn-default" id="generate_product1_button">購買</button>
+
+
+    
+
+<h4 id="who_s_p1"> </h4>
+<div id="put_product_div">
+</div>
+<p>
+	<h6>
+期數｜利率</br>
+０１｜0.01</br>
+０２｜0.02</br>
+０３｜0.03</br>
+０４｜0.04</br>
+０５｜0.05</br>
+０６｜0.06</br>
+０７｜0.07</br>
+０８｜0.08</br>
+０９｜0.09</br>
+１０｜0.10</br>
+１１｜0.11</br>
+１２｜0.12</br>
+</h6>
+</p>
+<div>
+	<h5>
+		Accounts List
+	<p id="accounts_list">
+	</p>
+	</h5>
+</div>
+
+
+
+
+</div>
+
+<div class ="right">
+
+
+<h4>log : </h4>
+    
+<textarea rows="45" id="log" cols="100" value=" ">
+</textarea>
+    
+</div>
+
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='http://140.119.164.162:8080/bower_components/web3/dist/web3.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
